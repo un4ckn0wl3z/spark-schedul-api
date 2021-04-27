@@ -1,5 +1,5 @@
 {
   "sparkJobName": "spark-job",
   "sparkJarName": "spark-job-1.0.jar",
-  "cmd": "spark-submit --master spark://spark-master:7077 --deploy-mode client --verbose --supervise $lib$ /opt/subfiles/movies.json /opt/subfiles/goodMovies"
+  "cmd": "/spark/bin/spark-submit --master spark://spark-master:7077 --deploy-mode client --verbose --supervise $lib$ /opt/subfiles/movies.json /opt/subfiles/goodMovies"
 }

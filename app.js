@@ -12,16 +12,16 @@ const cmd = config.cmd.replace("$lib$", SPARK_JAR)
 
 app.get(`/spark/${config.sparkJobName}/start`, (req, res) => {
 
-    if (!shell.which('spark-submit')) {
-        res.send('Cannot execute spark-submit')
-    }else{
+    // if (!shell.which('spark-submit')) {
+    //     res.send('Cannot execute spark-submit')
+    // }else{
       if (shell.exec(cmd).code !== 0) {
           res.send('Error: spark-submit commit failed')
       }else{
         res.send('Job running...')
       }
     
-    }
+    //}
 })
 
 app.listen(port, () => {
