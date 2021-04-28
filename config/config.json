@@ -1,0 +1,5 @@
+{
+  "sparkJobName": "spark-job",
+  "sparkJarName": "spark-job-1.0.jar",
+  "cmd": "/spark/bin/spark-submit --master spark://spark-master:7077 --deploy-mode client --verbose --supervise --conf 'spark.jars=/opt/subfiles/mongo-spark-connector_2.12-3.0.0.jar' $lib$ /opt/subfiles/movies.json /opt/subfiles/goodMovies"
+}
